@@ -35,8 +35,8 @@ def ask(question: str, chat=None) -> str:
     if chat is None:
         client = create_client()
         chat = create_chat(client)
-    response = chat.send_message(question)
 
+    response = chat.send_message(question)
     usage = response.usage_metadata
     if usage is None:
         print("[usage] input_tokens=不明 output_tokens=不明")
